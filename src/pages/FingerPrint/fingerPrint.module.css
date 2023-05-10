@@ -1,0 +1,44 @@
+.fingerPrintButton{
+
+    display: inline-block;
+    background-color: #FFD301;
+    color: #5B3B00;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.fingerPrintButton:hover {
+    background-color: #FFF44E;
+    color: #5B3B00;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    height: 100vh; /* adjust the height as needed */
+}
+
+.logo2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scan{
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2c75eb;
+
+}

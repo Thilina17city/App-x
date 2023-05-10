@@ -1,0 +1,21 @@
+{
+  "name": "atm_project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-epic-spinners": "^0.5.0"
+  },
+  "devDependencies": {
+    "@fingerprintjs/fingerprintjs": "^3.4.1",
+    "qrcode.react": "^3.1.0"
+  }
+}
