@@ -1,20 +1,20 @@
-// db.js
-import mysql from 'serverless-mysql';
-const db = mysql({
-    config: {
-        host: process.env.MYSQL_HOST,
-        port: process.env.MYSQL_PORT,
-        database: process.env.MYSQL_DATABASE,
-        user: process.env.MYSQL_USER,
-        password: process.env.MYSQL_PASSWORD
-    }
+// config/db.js
+const mysql = require("mysql");
+
+const connection = mysql.createConnection({
+    host: "3.234.10.181",
+    user: "root",
+    password: "Fdsbycity57R53",
+    database: "felicity",
+    port: "3306",
 });
-export default async function excuteQuery({ query, values }) {
-    try {
-        const results = await db.query(query, values);
-        await db.end();
-        return results;
-    } catch (error) {
-        return { error };
+
+connection.connect((err) => {
+    if (err) {
+        console.error("Error connecting to database:", err);
+        return;
     }
-}
+    console.log("Connected to database.");
+});
+
+module.exports = connection;

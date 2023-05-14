@@ -1,35 +1,20 @@
 import Link from 'next/link'
 import classes from "../styles/globals.module.css";
 import Image from "next/image";
-
+import React, { useState } from "react";
+import Form from "@/pages/Form";
 
 export default function App({ Component, pageProps }) {
-  return (
-      <>
+    const [showLogo, setShowLogo] = useState(true);
+    const isFormComponent = Component === Form;
 
-
-
-
-   <dive className={classes.body}>
-        {/*<div className={classes.frame}>*/}
-        {/*     <div className={classes.frame2}>*/}
-        {/*            <div className={classes.frame3}>*/}
-
-        <Link href={'/Form'}>Home</Link>
-        {/*<div className={classes.frame4}>*/}
-             <Component {...pageProps} />
-
-       <div className={classes.logo}>
-
-           <Image  src='/logo.png' width={275} height={250}/>
-
-
-
-       </div>
-            {/*</div>*/}
-     {/*     </div>*/}
-     {/*   </div>*/}
-     {/*</div>*/}
-   < /dive>
-  </>)
+    return (
+        <>
+            <div className={classes.body}>
+                <Link href={'/Form'}>Form</Link>
+                {!isFormComponent && showLogo && <div className={classes.logo}><Image src='/logo.png' width={275} height={250}/></div>}
+                <Component {...pageProps} />
+            </div>
+        </>
+    )
 }

@@ -16,6 +16,8 @@ export default function Index() {
       </Head>
       {/*<div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>*/}
   <div className={classes.row}>
+
+
     <Link href={'/Balance'}>
       <button className={classes.button} >Balance</button>
     </Link>
